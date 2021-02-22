@@ -6,7 +6,7 @@
 //UMFPACK采用CSC（列压缩存储） matlab中的接口为A/b
 #include <stdio.h>
 #include <math.h>
-#include "umfpack.h"
+#include <suitesparse/umfpack.h>
 //传递的四个参数A b x n -----Data:2013-02-27
 //意思为Ax=b n为矩阵维数
 //umf(SparseMatAi,SparseMatAx,SparseMatAp,B,testx,(N+1)*(M+1));
