@@ -46,7 +46,7 @@ void (*Sol_rigid)(double **X2,double **scc,double **svel,double **dis,double **v
 typedef Eigen::SparseMatrix<double> SpMat; // declares a column-major sparse matrix type of double
 
 
-static string __base_address = "/home/lklake/program/c/wwx/resource/";
+static string __base_address = "/content/wwx/resource/";
 static string base_address = __base_address;
 /*===========================add====添加开始====add================================*/
 
