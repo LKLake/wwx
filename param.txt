@@ -1,0 +1,35 @@
+double **ustar = new double *[N + 1];
+double **vstar = new double *[N + 1];
+double **u = new double *[N + 1];
+double **v = new double *[N + 1];
+double **upie = new double *[N + 1];
+double **vpie = new double *[N + 1];
+double **Pres = new double *[N + 1];//Pres代表压力
+
+int *SparseMatAi = new int[SMAnZ];
+double *SparseMatAx = new double[SMAnZ];
+int *SparseMatAp = new int[SMADi + 1];
+
+double **X2 = new double *[nii_2];
+double **scc = new double *[nii_2];//每一时刻固体节点位置
+double **svel = new double *[nii_2];//每一时刻固体节点速度
+double **inifcc_2 = new double *[njj_2];
+
+
+double delta_t
+double delta_x
+double delta_y
+
+double CF
+double Re
+double Turb
+
+int N
+int M
+int NN_2
+int MM_2
+int N_sec_2
+int M_sec_2
+double ss_2
+int nii_2;
+int njj_2
