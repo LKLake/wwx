@@ -811,23 +811,32 @@ fluidfield，这两个值应该要改变*/
 /*===========================add====添加开始====add================================*/
     /*
      * 恢复状态开始*/
-    int current_index = load_state(ustar,vstar,u,v,upie,vpie,Pres,
+    int current_index;
+    char recover_state;
+    cout<<"是否从恢复状态？y/n"<<endl;
+    cin>>recover_state;
+    //从头计算
+    if(recover_state == 'y'){
+        current_index = load_state(ustar,vstar,u,v,upie,vpie,Pres,
                                    SparseMatAi,SparseMatAx,SparseMatAp,
                                    X2,scc,svel,inifcc_2,
                                    &N,&M,&SMAnZ,&SMADi,&nii_2,&njj_2,&nkk,
                                    &delta_t,&delta_x,&delta_y,
                                    &CF,&Re,&Turb,&NN_2,&MM_2,&N_sec_2,&M_sec_2,&ss_2);
-    //如果恢复状态不成功
-    if(current_index == -1){
-        char start_from_begin;
-        cout<<"是否从头计算？y/n"<<endl;
-        cin>>start_from_begin;
-        //从头计算
-        if(start_from_begin == 'y'){
-            current_index = -1;
-        }else{//不从头计算
-            exit(-1);
+        //如果恢复状态不成功
+        if(current_index == -1){
+            char start_from_begin;
+            cout<<"是否从头计算？y/n"<<endl;
+            cin>>start_from_begin;
+            //从头计算
+            if(start_from_begin == 'y'){
+                current_index = -1;
+            }else{//不从头计算
+                exit(-1);
+            }
         }
+    }else{
+        current_index = -1;
     }
 
     /*
